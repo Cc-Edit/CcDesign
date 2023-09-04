@@ -13,7 +13,7 @@ export const WidgetData: MenuItem[] = [
             data: [
               {
                 title: '边框1',
-                cover: '/cover/datav/border/BorderBox1.png',
+                cover: '/cover/datav/border/borderBox1.png',
                 api: {},
                 event: [],
                 attribute: {
