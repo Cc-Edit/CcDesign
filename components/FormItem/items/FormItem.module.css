@@ -1,0 +1,24 @@
+.textField {
+  @apply h-8 text-xs w-full !important;
+}
+.mutiText{
+  @apply p-1 !important;
+}
+.buttonGroup{
+  @apply w-full h-8
+}
+.buttonGroupItem{
+  @apply p-0 flex-1 overflow-hidden whitespace-nowrap
+}
+.buttonGroupIcon{
+  @apply w-4 h-4 !important;
+}
+.tipsStyle {
+  @apply w-full h-full;
+}
+.muiTab{
+  @apply h-8 min-h-8 !important;
+}
+.muiTabItem{
+  @apply h-8 text-xs min-h-8 !important;
+}
