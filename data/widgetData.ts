@@ -38,7 +38,7 @@ export const WidgetData: MenuItem[] = [
               },
               {
                 title: '边框2',
-                cover: '/cover/datav/border/BorderBox2.png',
+                cover: '/cover/datav/border/borderBox2.png',
                 api: {},
                 event: [],
                 attribute: {
@@ -138,7 +138,7 @@ export const WidgetData: MenuItem[] = [
               },
               {
                 title: '边框6',
-                cover: '/cover/datav/border/BorderBox6.png',
+                cover: '/cover/datav/border/borderBox6.png',
                 api: {},
                 event: [],
                 attribute: {
@@ -163,7 +163,7 @@ export const WidgetData: MenuItem[] = [
               },
               {
                 title: '边框7',
-                cover: '/cover/datav/border/BorderBox7.png',
+                cover: '/cover/datav/border/borderBox7.png',
                 api: {},
                 event: [],
                 attribute: {
@@ -188,7 +188,7 @@ export const WidgetData: MenuItem[] = [
               },
               {
                 title: '边框8',
-                cover: '/cover/datav/border/BorderBox8.png',
+                cover: '/cover/datav/border/borderBox8.png',
                 api: {},
                 event: [],
                 attribute: {
@@ -213,7 +213,7 @@ export const WidgetData: MenuItem[] = [
               },
               {
                 title: '边框9',
-                cover: '/cover/datav/border/BorderBox9.png',
+                cover: '/cover/datav/border/borderBox9.png',
                 api: {},
                 event: [],
                 attribute: {
@@ -238,7 +238,7 @@ export const WidgetData: MenuItem[] = [
               },
               {
                 title: '边框10',
-                cover: '/cover/datav/border/BorderBox10.png',
+                cover: '/cover/datav/border/borderBox10.png',
                 api: {},
                 event: [],
                 attribute: {
@@ -263,7 +263,7 @@ export const WidgetData: MenuItem[] = [
               },
               {
                 title: '边框11',
-                cover: '/cover/datav/border/BorderBox11.png',
+                cover: '/cover/datav/border/borderBox11.png',
                 api: {},
                 event: [],
                 attribute: {
@@ -288,7 +288,7 @@ export const WidgetData: MenuItem[] = [
               },
               {
                 title: '边框12',
-                cover: '/cover/datav/border/BorderBox12.png',
+                cover: '/cover/datav/border/borderBox12.png',
                 api: {},
                 event: [],
                 attribute: {
@@ -313,7 +313,7 @@ export const WidgetData: MenuItem[] = [
               },
               {
                 title: '边框13',
-                cover: '/cover/datav/border/BorderBox13.png',
+                cover: '/cover/datav/border/borderBox13.png',
                 api: {},
                 event: [],
                 attribute: {
