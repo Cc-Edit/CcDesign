@@ -357,7 +357,7 @@ export const WidgetData: MenuItem[] = [
             data: [
               {
                 title: '基础按钮',
-                cover: '/cover/button/baseButton.png',
+                cover: '/cover/base/baseButton.png',
                 api: {},
                 event: [],
                 attribute: {
@@ -393,6 +393,31 @@ export const WidgetData: MenuItem[] = [
                         a: 1
                       }
                     }
+                  }
+                }
+              },
+              {
+                title: '基础图片',
+                cover: '/cover/base/baseImage.png',
+                api: {},
+                event: [],
+                attribute: {
+                  componentName: 'DvImage',
+                  useConfig: 'baseImage',
+                  position: {
+                    width: 220,
+                    height: 105
+                  },
+                  style: {
+                    backgroundColor: {
+                      r: 102,
+                      g: 107,
+                      b: 110,
+                      a: 1
+                    }
+                  },
+                  options: {
+
                   }
                 }
               }
