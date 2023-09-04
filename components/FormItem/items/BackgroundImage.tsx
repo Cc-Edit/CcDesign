@@ -1,4 +1,4 @@
-import {Button, OutlinedInput} from '@mui/material';
+import { Button, OutlinedInput } from '@mui/material';
 import Image from 'next/image';
 import { ChangeEvent, useState } from 'react';
 import { uploadFiles } from '@api/oss';
@@ -9,7 +9,8 @@ interface BackgroundImageProps {
   [key: string]: any,
   onChange: Function
 }
-const clearImage = '/illustrations/upload.png'
+const clearImage = '/illustrations/upload.png';
+
 export default function BackgroundImage(props: BackgroundImageProps) {
   const { enqueueSnackbar } = useSnackbar();
   const { className, defaultValue = '/illustrations/upload.png', value, showInput = true, onChange, ...prop } = props;
@@ -39,7 +40,7 @@ export default function BackgroundImage(props: BackgroundImageProps) {
         });
     }
   }
-  function handleChangeInput(event: ChangeEvent<HTMLInputElement>){
+  function handleChangeInput(event: ChangeEvent<HTMLInputElement>) {
     onChange?.(event.target.value === clearImage ? '' : event.target.value);
   }
   function resetBackgroundImage() {
