@@ -1,16 +1,18 @@
-import { Button } from '@mui/material';
+import {Button, OutlinedInput} from '@mui/material';
 import Image from 'next/image';
 import { ChangeEvent, useState } from 'react';
 import { uploadFiles } from '@api/oss';
 import { useSnackbar } from 'notistack';
 import { Domain } from '@/config/constant';
+import styles from '@/components/Design/components/FormItem/items/FormItem.module.css';
 interface BackgroundImageProps {
   [key: string]: any,
   onChange: Function
 }
+const clearImage = '/illustrations/upload.png'
 export default function BackgroundImage(props: BackgroundImageProps) {
   const { enqueueSnackbar } = useSnackbar();
-  const { className, defaultValue = '/illustrations/upload.png', value, onChange, ...prop } = props;
+  const { className, defaultValue = '/illustrations/upload.png', value, showInput = true, onChange, ...prop } = props;
   const [showButton, setShowButton] = useState(false);
   function handleChange(event: ChangeEvent<HTMLInputElement>) {
     const inputTarget = event.target;
@@ -37,6 +39,9 @@ export default function BackgroundImage(props: BackgroundImageProps) {
         });
     }
   }
+  function handleChangeInput(event: ChangeEvent<HTMLInputElement>){
+    onChange?.(event.target.value === clearImage ? '' : event.target.value);
+  }
   function resetBackgroundImage() {
     onChange?.('');
   }
@@ -53,7 +58,13 @@ export default function BackgroundImage(props: BackgroundImageProps) {
     </>
   );
   return (
-    <div className={`${className} relative opacity-80 h-30 border border-solid dark:border-zinc-600 border-zinc-300`}>
+    <div className={`${className} relative h-38`}>
+      <OutlinedInput
+        className={`${styles.textField} mb-2`}
+        value={computedValue}
+        onChange={handleChangeInput}
+      />
+      <div className='relative h-28 opacity-80 border border-solid dark:border-zinc-600 border-zinc-300'>
         <Image
           alt='页面'
           src={computedValue}
@@ -65,6 +76,7 @@ export default function BackgroundImage(props: BackgroundImageProps) {
             showButton && buttonGroup
           }
         </div>
+      </div>
     </div>
   );
 }
