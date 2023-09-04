@@ -1,7 +1,7 @@
 import useComponentStyle from '@/components/Design/hook/useComponentStyle';
 import useEventHandler from '@/components/Design/hook/useEventHandler';
 import loadable from '@loadable/component';
-const ElementComponent = loadable((props: {is: string}) => import(`CcBailu/components/${props.is}`), {
+const ElementComponent = loadable((props: {is: string}) => import(`@/bailu/components/${props.is}`), {
   fallback: <div>Loading...</div>,
   cacheKey: props => props.is
 });

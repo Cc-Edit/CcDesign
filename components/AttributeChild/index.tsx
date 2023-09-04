@@ -23,7 +23,7 @@ export default function AttributeChild() {
       const [selectElementId] = selectIds;
       const { componentName, useConfig = 'default' } = storeAttr[selectElementId];
       if (componentName) {
-        import(`CcBailu/components/${componentName}/config/${useConfig}`).then(({ default: elementConfig }) => {
+        import(`/src/bailu/components/${componentName}/config/${useConfig}`).then(({ default: elementConfig }) => {
           const { attributes, stickyRows } = elementConfig;
           setAttributes(attributes);
           setStickyRows(stickyRows);
