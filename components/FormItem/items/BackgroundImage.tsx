@@ -25,7 +25,7 @@ export default function BackgroundImage(props: BackgroundImageProps) {
           if (res?.isOk) {
             const { data } = res;
             const [imageId] = data as string[];
-            const imageUrl = `${Domain.baseURL}/${imageId}.${file.type.replace('image/', '')}`;
+            const imageUrl = `${Domain.baseOSS}/${imageId}.${file.type.replace('image/', '')}`;
             onChange?.(imageUrl);
           } else {
             enqueueSnackbar(`图片上传失败：${res?.msg}`, {

@@ -40,7 +40,7 @@ export default function Capture(props: CaptureProps) {
               if (res?.isOk) {
                 const { data } = res;
                 const [coverImageId] = data as string[];
-                onChange?.(`${Domain.baseURL}/${coverImageId}.png`);
+                onChange?.(`${Domain.baseOSS}/${coverImageId}.png`);
               } else {
                 enqueueSnackbar(`生成封面图失败：${res?.msg}`, {
                   variant: 'error'

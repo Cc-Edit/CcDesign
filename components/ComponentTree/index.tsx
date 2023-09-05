@@ -54,7 +54,7 @@ export default function ComponentTree() {
                       if (res?.isOk) {
                         const { data } = res;
                         const [coverImageId] = data as string[];
-                        savaComponentTemplate({ name: attributeMap[component.id].name, cover: `${Domain.baseURL}/${coverImageId}.png`, templateStr: JSON.stringify(templateData) }).then(({ isOk, msg }) => {
+                        savaComponentTemplate({ name: attributeMap[component.id].name, cover: `${Domain.baseOSS}/${coverImageId}.png`, templateStr: JSON.stringify(templateData) }).then(({ isOk, msg }) => {
                           if (isOk) {
                             enqueueSnackbar(`保存模板成功`, {
                               variant: 'success'
