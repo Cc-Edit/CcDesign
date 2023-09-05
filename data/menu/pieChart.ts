@@ -343,60 +343,6 @@ export const PieChart: MenuItem[] = [
                     }
                   }
                 }
-              },
-              {
-                title: '动态环图',
-                cover: '/cover/datav/table/DvScrollBoard.png',
-                api: {
-                  data: [
-                    {
-                      name: 'Mon',
-                      value: 200
-                    },
-                    {
-                      name: 'Tue',
-                      value: 100
-                    },
-                    {
-                      name: 'Wed',
-                      value: 400
-                    },
-                    {
-                      name: 'Thu',
-                      value: 800
-                    },
-                    {
-                      name: 'Fri',
-                      value: 180
-                    },
-                    {
-                      name: 'Sat',
-                      value: 290
-                    },
-                    {
-                      name: 'Sun',
-                      value: 200
-                    }
-                  ]
-                },
-                event: [],
-                attribute: {
-                  componentName: 'DvRingChart',
-                  useConfig: 'baseRingChart',
-                  position: {
-                    width: 220,
-                    height: 105
-                  },
-                  style: {
-                    backgroundColor: {
-                      r: 102,
-                      g: 107,
-                      b: 110,
-                      a: 0
-                    }
-                  },
-                  options: {}
-                }
               }
             ]
           },
