@@ -77,7 +77,8 @@ export default function ComponentTree() {
                       }
                     })
                     .catch(e => {
-                      enqueueSnackbar(`生成封面图失败: 上传异常`, {
+                      const { msg = '上传异常' } = e || {};
+                      enqueueSnackbar(`生成封面图失败: ${msg}`, {
                         variant: 'error'
                       });
                     });

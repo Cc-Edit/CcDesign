@@ -34,7 +34,8 @@ export default function BackgroundImage(props: BackgroundImageProps) {
           }
         })
         .catch(e => {
-          enqueueSnackbar(`图片上传失败: 上传异常`, {
+          const { msg = '上传异常' } = e || {};
+          enqueueSnackbar(`图片上传失败: ${msg}`, {
             variant: 'error'
           });
         });

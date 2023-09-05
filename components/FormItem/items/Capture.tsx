@@ -49,7 +49,8 @@ export default function Capture(props: CaptureProps) {
               setCovering(false);
             })
             .catch(e => {
-              enqueueSnackbar(`生成封面图失败: 上传失败`, {
+              const { msg = '上传异常' } = e || {};
+              enqueueSnackbar(`生成封面图失败: ${msg}`, {
                 variant: 'error'
               });
               setCovering(false);
