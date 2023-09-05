@@ -23,11 +23,12 @@ export default function Capture(props: CaptureProps) {
   }
   function genCoverImage() {
     setCovering(true);
-    const canvas = document.getElementById('designContainer');
+    const canvas = document.getElementById('designContainer') as HTMLElement;
     const { backgroundColor } = pageConfig;
     html2canvas(canvas as HTMLElement, {
       allowTaint: true,
       useCORS: true,
+      scale: 0.25,
       backgroundColor: `rgba(${backgroundColor.r},${backgroundColor.g},${backgroundColor.b},${backgroundColor.a})`
     }).then(canvas => {
       canvas.toBlob(blob => {

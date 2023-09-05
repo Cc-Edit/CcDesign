@@ -42,7 +42,8 @@ export default function ComponentTree() {
               event: eventMap[component.id] || []
             };
             html2canvas(document.getElementById(component.id) as HTMLElement, {
-              useCORS: true
+              useCORS: true,
+              scale: 1
             }).then(canvas => {
               canvas.toBlob(blob => {
                 if (blob) {
