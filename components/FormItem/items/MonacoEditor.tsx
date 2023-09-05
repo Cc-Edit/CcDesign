@@ -141,6 +141,16 @@ export default function MonacoEditor(props: EditorProps) {
       mapping: originMapping
     });
   }, [originData, originMapping]);
+  useEffect(() => {
+    const [dataItem = {}] = originData;
+    const newMapping = { ...originMapping } as Record<string, any>;
+    Object.keys(newMapping).forEach(key => {
+      if (!(key in dataItem)) {
+        delete newMapping[key];
+      }
+    });
+    setOriginMapping(newMapping);
+  }, [originData]);
   const [dataItem = {}] = originData;
   const tableRowEle = Object.keys(dataItem).map(key => {
     return (<StyledTableRow key={key} sx={{ '&:last-child td, &:last-child th': { border: 0 }}}>
