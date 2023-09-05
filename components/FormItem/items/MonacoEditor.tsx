@@ -158,7 +158,7 @@ export default function MonacoEditor(props: EditorProps) {
       <StyledTableCell align='center' >
         <Select value={originMapping[key] || ''} onChange={(event: SelectChangeEvent) => { handleSelectChange(event, key); }}>
           <MenuItem value=''>不关联</MenuItem>
-          <MenuItem value='x-b' disabled={Object.values(mapping).includes('x-b')}>X轴</MenuItem>
+          <MenuItem value='x-b'>X轴</MenuItem>
           {/* <MenuItem value='x-t'>X轴顶部</MenuItem>*/}
           <MenuItem value='y-l'>Y轴</MenuItem>
           {/* <MenuItem value='y-r'>Y轴右侧</MenuItem>*/}
