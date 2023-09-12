@@ -144,12 +144,14 @@ export default function MonacoEditor(props: EditorProps) {
   useEffect(() => {
     const [dataItem = {}] = originData;
     const newMapping = { ...originMapping } as Record<string, any>;
+    let hasChange = false;
     Object.keys(newMapping).forEach(key => {
       if (!(key in dataItem)) {
         delete newMapping[key];
+        hasChange = true;
       }
     });
-    setOriginMapping(newMapping);
+    hasChange && setOriginMapping(newMapping);
   }, [originData]);
   const [dataItem = {}] = originData;
   const tableRowEle = Object.keys(dataItem).map(key => {
